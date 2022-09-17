@@ -337,7 +337,7 @@ header .btns .hydrated:nth-child(2) {
     color: var(--black);
     font-size: 2rem;
     line-height: 50px;
-    white-space: nowrap;
+    white-space: revert;
 }
 
 .col-01 .col .line{
@@ -602,6 +602,8 @@ header .btns .hydrated:nth-child(2) {
 }
 .fccontent #ycwz{
     display: none;
+    width: 60%;
+    margin: 20% auto;
     word-wrap: break-word;
     font-weight: 600;
     height: 100%;
@@ -733,8 +735,8 @@ header .btns .hydrated:nth-child(2) {
     transform: translate(-50%,-50%);
     border-radius: 50%;
     z-index: 10000;
-    transition: all .2s ease-out;
-    -webkit-transition: all .2s ease-out;
+    /* transition: all .1s ease-out;
+    -webkit-transition: all .1s ease-out; */
 }
 .cursor-1.active{
     height: 3rem;   
@@ -751,8 +753,8 @@ header .btns .hydrated:nth-child(2) {
     transform: translate(-50%,-50%);
     border-radius: 50%;
     z-index: 10000;
-    transition: all .3s ease-out;
-    -webkit-transition: all .3s ease-out;   
+    /* transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;    */
 }
 .cursor-2.active{
     display: none;
@@ -767,11 +769,32 @@ header .btns .hydrated:nth-child(2) {
 }
 
 @media (max-width: 768px){
-    .col-01, .col {
-        padding-top: 4rem;
+    .col-01  {
+        padding-top: 6rem;
+        padding-left: 6rem;
+    }
+    .col{
+        padding-top: 0.2rem;
         padding-left: 6rem;
     }
     .intro-footer{
         padding: 13.5rem 4.5rem 0 8rem;
+    }
+} 
+
+@media (max-width: 520px){
+    .col-01{
+        padding-top: 6rem;
+        padding-left: 2.8rem;
+    }
+    .col {
+        padding-top: 0.2rem;
+        padding-left: 2.8rem;
+    }
+    .intro-footer{
+        padding: 13.5rem 4.5rem 0 2.5rem;
+    }
+    #Picture .picture-container{
+        padding: 2rem 2rem;
     }
 } 

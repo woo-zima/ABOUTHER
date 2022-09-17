@@ -23,7 +23,7 @@
   function bindEvent() {
     downIcon.addEventListener('click', downIconHandle, false);
     window.addEventListener('load', scrollTextHandle, false);
-    window.addEventListener('scroll', scrollButton, false);
+    // window.addEventListener('scroll', scrollButton, false);
   }
   // 计算元素距离顶部位置
   function elementPosition(obj) {
@@ -60,40 +60,6 @@
   setInterval(() => {
     scrollTextHandle();
   }, 10);
-
-  // 滚动到底部
-  function scrollButton() {
-    let { scrollTop, scrollHeight, clientHeight } = doc.scrollingElement;
-    if (scrollTop + clientHeight >= scrollHeight) {
-      console.log('button');
-    }
-  }
-  // let osh = scroll_text.offsetHeight;
-  // timeline.set('.scorllText-inner', {
-  //   x: function (i) {
-  //     return i * 1520;
-  //   },
-  // });
-
-  // timeline.to('.scorllText-inner', 5, {
-  //   ease: Linear.easeNone,
-  //   x: '+=1520', //将每个块向右移动500px
-  //   modifiers: {
-  //     x: function (x) {
-  //       return x % 1520; //强制x值在0和500之间
-  //     },
-  //   },
-  //   repeat: -1,
-  // });
-
-  // // 滚动条到底部的距离
-  // function getButtonGap() {
-  //   return Math.floor(
-  //     document.body.scrollHeight -
-  //       document.documentElement.clientHeight -
-  //       document.documentElement.scrollTop
-  //   );
-  // }
 
   //滚动条高度 = 容器高度/内容高度*容器高度
   //document.documentElement.clientHeight / document.getElementById('About').offsetHeight * document.documentElement.clientHeight
